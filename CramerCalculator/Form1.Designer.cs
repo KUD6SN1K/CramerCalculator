@@ -73,91 +73,115 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(293, 146);
+            textBox1.Font = new Font("Times New Roman", 14F);
+            textBox1.Location = new Point(293, 143);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(31, 23);
+            textBox1.Size = new Size(31, 29);
             textBox1.TabIndex = 1;
+            textBox1.KeyPress += textBox1_KeyPress;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(372, 146);
+            textBox2.Font = new Font("Times New Roman", 14F);
+            textBox2.Location = new Point(372, 142);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(31, 23);
+            textBox2.Size = new Size(31, 29);
             textBox2.TabIndex = 2;
+            textBox2.KeyPress += textBox2_KeyPress;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(454, 145);
+            textBox3.Font = new Font("Times New Roman", 14F);
+            textBox3.Location = new Point(454, 142);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(31, 23);
+            textBox3.Size = new Size(31, 29);
             textBox3.TabIndex = 3;
+            textBox3.KeyPress += textBox3_KeyPress;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(542, 146);
+            textBox4.Font = new Font("Times New Roman", 14F);
+            textBox4.Location = new Point(542, 142);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(31, 23);
+            textBox4.Size = new Size(31, 29);
             textBox4.TabIndex = 4;
+            textBox4.KeyPress += textBox4_KeyPress;
             // 
             // textBox5
             // 
+            textBox5.Font = new Font("Times New Roman", 14F);
             textBox5.Location = new Point(293, 193);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(31, 23);
+            textBox5.Size = new Size(31, 29);
             textBox5.TabIndex = 5;
+            textBox5.KeyPress += textBox5_KeyPress;
             // 
             // textBox6
             // 
+            textBox6.Font = new Font("Times New Roman", 14F);
             textBox6.Location = new Point(372, 193);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(31, 23);
+            textBox6.Size = new Size(31, 29);
             textBox6.TabIndex = 6;
+            textBox6.KeyPress += textBox6_KeyPress;
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(454, 193);
+            textBox7.Font = new Font("Times New Roman", 14F);
+            textBox7.Location = new Point(454, 194);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(31, 23);
+            textBox7.Size = new Size(31, 29);
             textBox7.TabIndex = 7;
+            textBox7.KeyPress += textBox7_KeyPress;
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(542, 193);
+            textBox8.Font = new Font("Times New Roman", 14F);
+            textBox8.Location = new Point(542, 194);
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(31, 23);
+            textBox8.Size = new Size(31, 29);
             textBox8.TabIndex = 8;
+            textBox8.KeyPress += textBox8_KeyPress;
             // 
             // textBox9
             // 
-            textBox9.Location = new Point(293, 244);
+            textBox9.Font = new Font("Times New Roman", 14F);
+            textBox9.Location = new Point(293, 241);
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(31, 23);
+            textBox9.Size = new Size(31, 29);
             textBox9.TabIndex = 9;
+            textBox9.KeyPress += textBox9_KeyPress;
             // 
             // textBox10
             // 
-            textBox10.Location = new Point(372, 244);
+            textBox10.Font = new Font("Times New Roman", 14F);
+            textBox10.Location = new Point(372, 241);
             textBox10.Name = "textBox10";
-            textBox10.Size = new Size(31, 23);
+            textBox10.Size = new Size(31, 29);
             textBox10.TabIndex = 10;
+            textBox10.KeyPress += textBox10_KeyPress;
             // 
             // textBox11
             // 
-            textBox11.Location = new Point(454, 243);
+            textBox11.Font = new Font("Times New Roman", 14F);
+            textBox11.Location = new Point(454, 241);
             textBox11.Name = "textBox11";
-            textBox11.Size = new Size(31, 23);
+            textBox11.Size = new Size(31, 29);
             textBox11.TabIndex = 11;
+            textBox11.KeyPress += textBox11_KeyPress;
             // 
             // textBox12
             // 
-            textBox12.Location = new Point(542, 243);
+            textBox12.Font = new Font("Times New Roman", 14F);
+            textBox12.Location = new Point(542, 241);
             textBox12.Name = "textBox12";
-            textBox12.Size = new Size(31, 23);
+            textBox12.Size = new Size(31, 29);
             textBox12.TabIndex = 12;
+            textBox12.KeyPress += textBox12_KeyPress;
             // 
             // label2
             // 
-            label2.Font = new Font("Times New Roman", 14F);
+            label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
             label2.Location = new Point(326, 146);
             label2.Name = "label2";
             label2.Size = new Size(46, 22);
@@ -166,7 +190,7 @@
             // 
             // label3
             // 
-            label3.Font = new Font("Times New Roman", 14F);
+            label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
             label3.Location = new Point(407, 146);
             label3.Name = "label3";
             label3.Size = new Size(46, 22);
@@ -175,7 +199,7 @@
             // 
             // label4
             // 
-            label4.Font = new Font("Times New Roman", 14F);
+            label4.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
             label4.Location = new Point(488, 146);
             label4.Name = "label4";
             label4.Size = new Size(46, 22);
@@ -193,8 +217,8 @@
             // 
             // label6
             // 
-            label6.Font = new Font("Times New Roman", 14F);
-            label6.Location = new Point(326, 193);
+            label6.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            label6.Location = new Point(326, 196);
             label6.Name = "label6";
             label6.Size = new Size(46, 22);
             label6.TabIndex = 17;
@@ -202,8 +226,8 @@
             // 
             // label7
             // 
-            label7.Font = new Font("Times New Roman", 14F);
-            label7.Location = new Point(407, 193);
+            label7.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            label7.Location = new Point(407, 197);
             label7.Name = "label7";
             label7.Size = new Size(46, 22);
             label7.TabIndex = 18;
@@ -211,8 +235,8 @@
             // 
             // label8
             // 
-            label8.Font = new Font("Times New Roman", 14F);
-            label8.Location = new Point(488, 193);
+            label8.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            label8.Location = new Point(488, 197);
             label8.Name = "label8";
             label8.Size = new Size(46, 22);
             label8.TabIndex = 19;
@@ -221,7 +245,7 @@
             // label9
             // 
             label9.Font = new Font("Times New Roman", 16F);
-            label9.Location = new Point(515, 191);
+            label9.Location = new Point(515, 197);
             label9.Name = "label9";
             label9.Size = new Size(27, 22);
             label9.TabIndex = 20;
@@ -229,7 +253,7 @@
             // 
             // label10
             // 
-            label10.Font = new Font("Times New Roman", 14F);
+            label10.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
             label10.Location = new Point(326, 244);
             label10.Name = "label10";
             label10.Size = new Size(46, 22);
@@ -238,7 +262,7 @@
             // 
             // label11
             // 
-            label11.Font = new Font("Times New Roman", 14F);
+            label11.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
             label11.Location = new Point(407, 244);
             label11.Name = "label11";
             label11.Size = new Size(46, 22);
@@ -247,7 +271,7 @@
             // 
             // label12
             // 
-            label12.Font = new Font("Times New Roman", 14F);
+            label12.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
             label12.Location = new Point(488, 244);
             label12.Name = "label12";
             label12.Size = new Size(46, 22);
@@ -284,7 +308,7 @@
             // 
             // label15
             // 
-            label15.Font = new Font("Times New Roman", 14F);
+            label15.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
             label15.Location = new Point(213, 419);
             label15.Name = "label15";
             label15.Size = new Size(46, 22);
@@ -293,7 +317,7 @@
             // 
             // label16
             // 
-            label16.Font = new Font("Times New Roman", 14F);
+            label16.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
             label16.Location = new Point(372, 419);
             label16.Name = "label16";
             label16.Size = new Size(46, 22);
@@ -302,7 +326,7 @@
             // 
             // label17
             // 
-            label17.Font = new Font("Times New Roman", 14F);
+            label17.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
             label17.Location = new Point(527, 419);
             label17.Name = "label17";
             label17.Size = new Size(46, 22);
