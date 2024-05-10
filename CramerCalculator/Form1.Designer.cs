@@ -305,33 +305,31 @@
             button1.TabIndex = 26;
             button1.Text = "Решить систему уравнений";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label15
             // 
             label15.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label15.Location = new Point(213, 419);
+            label15.Location = new Point(146, 419);
             label15.Name = "label15";
-            label15.Size = new Size(46, 22);
+            label15.Size = new Size(207, 21);
             label15.TabIndex = 27;
-            label15.Text = "x1=";
             // 
             // label16
             // 
             label16.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label16.Location = new Point(372, 419);
+            label16.Location = new Point(359, 419);
             label16.Name = "label16";
-            label16.Size = new Size(46, 22);
+            label16.Size = new Size(201, 21);
             label16.TabIndex = 28;
-            label16.Text = "x2=";
             // 
             // label17
             // 
             label17.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label17.Location = new Point(527, 419);
+            label17.Location = new Point(566, 419);
             label17.Name = "label17";
-            label17.Size = new Size(46, 22);
+            label17.Size = new Size(227, 21);
             label17.TabIndex = 29;
-            label17.Text = "x3=";
             // 
             // Form1
             // 
