@@ -6,108 +6,96 @@ namespace CramerCalculator
         public Form1()
         {
             InitializeComponent();
+            BindKeyPressEventToTextBoxes();
+            BindKeyDownEventToTextBoxes();
+        }
+        private void BindKeyPressEventToTextBoxes()
+        {
+            textBox1.KeyPress += TextBox_KeyPress;
+            textBox2.KeyPress += TextBox_KeyPress;
+            textBox3.KeyPress += TextBox_KeyPress;
+            textBox4.KeyPress += TextBox_KeyPress;
+            textBox5.KeyPress += TextBox_KeyPress;
+            textBox6.KeyPress += TextBox_KeyPress;
+            textBox7.KeyPress += TextBox_KeyPress;
+            textBox8.KeyPress += TextBox_KeyPress;
+            textBox9.KeyPress += TextBox_KeyPress;
+            textBox10.KeyPress += TextBox_KeyPress;
+            textBox11.KeyPress += TextBox_KeyPress;
+            textBox12.KeyPress += TextBox_KeyPress;
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void BindKeyDownEventToTextBoxes()
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
-                (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
+            textBox1.KeyDown += textBox_KeyDown;
+            textBox2.KeyDown += textBox_KeyDown;
+            textBox3.KeyDown += textBox_KeyDown;
+            textBox4.KeyDown += textBox_KeyDown;
+            textBox5.KeyDown += textBox_KeyDown;
+            textBox6.KeyDown += textBox_KeyDown;
+            textBox7.KeyDown += textBox_KeyDown;
+            textBox8.KeyDown += textBox_KeyDown;
+            textBox9.KeyDown += textBox_KeyDown;
+            textBox10.KeyDown += textBox_KeyDown;
+            textBox11.KeyDown += textBox_KeyDown;
+            textBox12.KeyDown += textBox_KeyDown;
+        }
+
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox currentTextBox = sender as TextBox;
+
+            if (currentTextBox != null)
             {
-                e.Handled = true;
+                if (e.KeyCode == Keys.Left || e.KeyCode == Keys.Right || e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+                {
+                    int currentIndex = this.Controls.IndexOf(currentTextBox);
+                    int currentColumn = currentIndex % 4;
+
+                    if (e.KeyCode == Keys.Left && currentColumn > -1)
+                    {
+                        for (int i = currentIndex + 1; i >= 0; i--)
+                        {
+                            if (this.Controls[i] is TextBox)
+                            {
+                                this.Controls[i].Focus();
+                                break;
+                            }
+                        }
+                    }
+                    else if (e.KeyCode == Keys.Right && currentColumn < 4)
+                    {
+                        for (int i = currentIndex - 1; i < this.Controls.Count; i++)
+                        {
+                            if (this.Controls[i] is TextBox)
+                            {
+                                this.Controls[i].Focus();
+                                break;
+                            }
+                        }
+                    }
+                    else if (e.KeyCode == Keys.Up)
+                    {
+                        int newIndex = currentIndex + 4;
+                        if (newIndex >= 0 && newIndex < this.Controls.Count && this.Controls[newIndex] is TextBox)
+                        {
+                            this.Controls[newIndex].Focus();
+                        }
+                    }
+                    else if (e.KeyCode == Keys.Down)
+                    {
+                        int newIndex = currentIndex - 4;
+                        if (newIndex >= 0 && newIndex < this.Controls.Count && this.Controls[newIndex] is TextBox)
+                        {
+                            this.Controls[newIndex].Focus();
+                        }
+                    }
+
+                    e.Handled = true;
+                }
             }
         }
-
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
-                (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
-                (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
-                (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
-                (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
-                (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
-                (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
-                (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
-                 (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
-                (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
-                 (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
                 (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0))
@@ -225,6 +213,25 @@ namespace CramerCalculator
                 modifiedMatrix[i, index] = constants[i];
             }
             return modifiedMatrix;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
+            label15.Text = "";
+            label16.Text = "";
+            label17.Text = "";
         }
     }
 }

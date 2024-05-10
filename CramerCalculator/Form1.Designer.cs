@@ -58,6 +58,7 @@
             label15 = new Label();
             label16 = new Label();
             label17 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -78,7 +79,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(31, 29);
             textBox1.TabIndex = 1;
-            textBox1.KeyPress += textBox1_KeyPress;
             // 
             // textBox2
             // 
@@ -87,7 +87,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(31, 29);
             textBox2.TabIndex = 2;
-            textBox2.KeyPress += textBox2_KeyPress;
             // 
             // textBox3
             // 
@@ -96,7 +95,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(31, 29);
             textBox3.TabIndex = 3;
-            textBox3.KeyPress += textBox3_KeyPress;
             // 
             // textBox4
             // 
@@ -105,7 +103,6 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(31, 29);
             textBox4.TabIndex = 4;
-            textBox4.KeyPress += textBox4_KeyPress;
             // 
             // textBox5
             // 
@@ -114,7 +111,6 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(31, 29);
             textBox5.TabIndex = 5;
-            textBox5.KeyPress += textBox5_KeyPress;
             // 
             // textBox6
             // 
@@ -123,7 +119,6 @@
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(31, 29);
             textBox6.TabIndex = 6;
-            textBox6.KeyPress += textBox6_KeyPress;
             // 
             // textBox7
             // 
@@ -132,7 +127,6 @@
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(31, 29);
             textBox7.TabIndex = 7;
-            textBox7.KeyPress += textBox7_KeyPress;
             // 
             // textBox8
             // 
@@ -141,7 +135,6 @@
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(31, 29);
             textBox8.TabIndex = 8;
-            textBox8.KeyPress += textBox8_KeyPress;
             // 
             // textBox9
             // 
@@ -150,7 +143,6 @@
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(31, 29);
             textBox9.TabIndex = 9;
-            textBox9.KeyPress += textBox9_KeyPress;
             // 
             // textBox10
             // 
@@ -159,7 +151,6 @@
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(31, 29);
             textBox10.TabIndex = 10;
-            textBox10.KeyPress += textBox10_KeyPress;
             // 
             // textBox11
             // 
@@ -168,7 +159,6 @@
             textBox11.Name = "textBox11";
             textBox11.Size = new Size(31, 29);
             textBox11.TabIndex = 11;
-            textBox11.KeyPress += textBox11_KeyPress;
             // 
             // textBox12
             // 
@@ -177,7 +167,6 @@
             textBox12.Name = "textBox12";
             textBox12.Size = new Size(31, 29);
             textBox12.TabIndex = 12;
-            textBox12.KeyPress += textBox12_KeyPress;
             // 
             // label2
             // 
@@ -331,11 +320,23 @@
             label17.Size = new Size(227, 21);
             label17.TabIndex = 29;
             // 
+            // button2
+            // 
+            button2.Font = new Font("Times New Roman", 12F);
+            button2.Location = new Point(718, 12);
+            button2.Name = "button2";
+            button2.Size = new Size(84, 32);
+            button2.TabIndex = 30;
+            button2.Text = "Очистить";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(814, 472);
+            Controls.Add(button2);
             Controls.Add(label17);
             Controls.Add(label16);
             Controls.Add(label15);
@@ -406,5 +407,6 @@
         private Label label15;
         private Label label16;
         private Label label17;
+        private Button button2;
     }
 }
