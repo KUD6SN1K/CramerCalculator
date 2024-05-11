@@ -47,6 +47,12 @@ namespace CramerCalculator
 
             if (currentTextBox != null)
             {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    e.Handled = true;
+                    e.SuppressKeyPress = true;
+                    this.ActiveControl = null;
+                }
                 if (e.KeyCode == Keys.Left || e.KeyCode == Keys.Right || e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
                 {
                     int currentIndex = this.Controls.IndexOf(currentTextBox);
@@ -95,6 +101,7 @@ namespace CramerCalculator
                 }
             }
         }
+
         private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-') ||
@@ -105,6 +112,11 @@ namespace CramerCalculator
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            SolveEquations();
+        }
+
+        private void SolveEquations()
         {
             double[,] coefficients = new double[3, 3];
             double[] constants = new double[3];
@@ -156,6 +168,7 @@ namespace CramerCalculator
             }
             return solution;
         }
+
         private double CalculateDeterminant(double[,] matrix)
         {
             int n = matrix.GetLength(0);
@@ -217,6 +230,11 @@ namespace CramerCalculator
 
         private void button2_Click(object sender, EventArgs e)
         {
+            ClearTextBoxes();
+        }
+
+        private void ClearTextBoxes()
+        {
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
@@ -232,6 +250,16 @@ namespace CramerCalculator
             label15.Text = "";
             label16.Text = "";
             label17.Text = "";
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(sender, e);
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }
