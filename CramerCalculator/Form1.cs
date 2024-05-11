@@ -261,5 +261,25 @@ namespace CramerCalculator
                 e.SuppressKeyPress = true;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoadTestExample();
+        }
+        private void LoadTestExample()
+        {
+            textBox1.Text = "3";    
+            textBox2.Text = "2";    
+            textBox3.Text = "3";    
+            textBox4.Text = "14";   
+            textBox5.Text = "2";    
+            textBox6.Text = "-1";  
+            textBox7.Text = "1";    
+            textBox8.Text = "5"; 
+            textBox9.Text = "3";   
+            textBox10.Text = "4";  
+            textBox11.Text = "-1"; 
+            textBox12.Text = "5";
+        }
     }
 }

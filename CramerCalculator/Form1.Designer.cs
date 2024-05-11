@@ -59,6 +59,7 @@
             label16 = new Label();
             label17 = new Label();
             button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -331,11 +332,23 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.Font = new Font("Times New Roman", 12F);
+            button3.Location = new Point(718, 50);
+            button3.Name = "button3";
+            button3.Size = new Size(84, 30);
+            button3.TabIndex = 31;
+            button3.Text = "Тест";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(814, 472);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label17);
             Controls.Add(label16);
@@ -409,5 +422,6 @@
         private Label label16;
         private Label label17;
         private Button button2;
+        private Button button3;
     }
 }
