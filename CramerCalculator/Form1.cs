@@ -57,7 +57,7 @@ namespace CramerCalculator
                 {
                     int currentIndex = this.Controls.IndexOf(currentTextBox);
                     int currentColumn = currentIndex % 4;
-
+                    
                     if (e.KeyCode == Keys.Left && currentColumn > -1)
                     {
                         for (int i = currentIndex + 1; i >= 0; i--)
@@ -142,6 +142,10 @@ namespace CramerCalculator
                     label15.Text = $"x1 = {solution[0]:F2}";
                     label16.Text = $"x2 = {solution[1]:F2}";
                     label17.Text = $"x3 = {solution[2]:F2}";
+                    if (checkBox1.Checked) 
+                    {
+                        WriteResultToFile(solution, coefficients, constants);
+                    }
                 }
             }
             catch (ArgumentException ex)
@@ -280,6 +284,47 @@ namespace CramerCalculator
             textBox10.Text = "4";  
             textBox11.Text = "-1"; 
             textBox12.Text = "5";
+        }
+        private void WriteResultToFile(double[] solution, double[,] coefficients, double[] constants)
+        {
+            try
+            {
+                string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads", "result.txt");
+
+                using (StreamWriter writer = new StreamWriter(path))
+                {
+                    writer.WriteLine("Изначальная система уравнений:");
+                    WriteEquationsToFile(writer, coefficients, constants);
+                    writer.WriteLine();
+
+                    writer.WriteLine("Решение системы:");
+                    writer.WriteLine($"x1 = {solution[0]:F2}");
+                    writer.WriteLine($"x2 = {solution[1]:F2}");
+                    writer.WriteLine($"x3 = {solution[2]:F2}");
+                }
+
+                MessageBox.Show("Результат записан в файл " + path);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при записи в файл: {ex.Message}");
+            }
+        }
+
+        private void WriteEquationsToFile(StreamWriter writer, double[,] coefficients, double[] constants)
+        {
+            for (int i = 0; i < constants.Length; i++)
+            {
+                for (int j = 0; j < coefficients.GetLength(1); j++)
+                {
+                    writer.Write($"{coefficients[i, j]}x{j + 1} ");
+                    if (j < coefficients.GetLength(1) - 1)
+                    {
+                        writer.Write("+ ");
+                    }
+                }
+                writer.WriteLine($"= {constants[i]}");
+            }
         }
     }
 }
