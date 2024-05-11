@@ -59,7 +59,6 @@
             label16 = new Label();
             label17 = new Label();
             button2 = new Button();
-            button3 = new Button();
             checkBox1 = new CheckBox();
             SuspendLayout();
             // 
@@ -333,22 +332,11 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // button3
-            // 
-            button3.Font = new Font("Times New Roman", 12F);
-            button3.Location = new Point(718, 61);
-            button3.Name = "button3";
-            button3.Size = new Size(84, 30);
-            button3.TabIndex = 31;
-            button3.Text = "Тест";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Times New Roman", 12F);
-            checkBox1.Location = new Point(700, 97);
+            checkBox1.Location = new Point(700, 61);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(114, 42);
             checkBox1.TabIndex = 32;
@@ -361,7 +349,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(814, 472);
             Controls.Add(checkBox1);
-            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label17);
             Controls.Add(label16);
@@ -435,7 +422,6 @@
         private Label label16;
         private Label label17;
         private Button button2;
-        private Button button3;
         private CheckBox checkBox1;
     }
 }
